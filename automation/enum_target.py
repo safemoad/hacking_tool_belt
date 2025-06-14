@@ -1,22 +1,30 @@
 # Import required modules
 import re
+import nmap
 
 # Global variables defined by prompts
-ip_address = None
+target = None
+scanner = nmap.PortScanner()
 
 # Get and store IP address from prompt
-def get_ip_address();
-  global ip_address
+def get_target_ip():
+  global target
   while True;
-        target_ip = input("Enter the target IP address: ").strip()
+        target_response = input("Enter the target IP address (e.g., 192.168.1.1 or example.com): ")
 
         # Basic validation for IP address or hostname format
         ip_pattern = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
         hostname_pattern = re.compile(r"^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")
 
         if ip_pattern.match(target_ip) or hostname_pattern.match(target_ip):
-            target_ip_global = target_ip # Store the valid IP in the global variable
-            print(f"\nIP address '{target_ip_global}' has been stored globally.")
+            target = target_response
+            print(f"\nIP address '{target}' has been stored globally.")
             break
         else:
             print("Invalid IP address or hostname format. Please try again.")
+
+def print(target):
+  print("Your current nmap target is " + target)
+
+if __name__ == "__main__":
+  print(target)
