@@ -1,9 +1,11 @@
 #! /usr/bin/bash
 
 # Update VM and Packages
-read -n 1 -p 'Step 1 of 3: Run APT Update/Upgrade on this machine? [Y/n] ' response;
+read -n 1 -p 'Step 1 of 3: Run APT Update/Upgrade on this machine? [Y/n] ' response
   if [ "$response" != "Y" ] 
-    then echo 'Step 1 of 3: Skipping APT Update/Upgrade '
+    then 
+      echo ''
+      echo 'Step 1 of 3: Skipping APT Update/Upgrade '
     fi
   if [ "$response" == "Y" ] 
     then
