@@ -19,11 +19,11 @@ def get_RHOST():
             print(f"Target '{RHOST}' acquired!")
             break
         else:
-            print("Invalid IP address or hostname format. Please try again.")
+            print("Invalid IP address or hostname format. Please try again. ")
 
 # NMAP Target
 def nmap_target():
-      print(f"Initiating NMAP scan on: '{RHOST}'")
+      print(f"Initiating NMAP scan on: '{RHOST}', please wait... ")
   
 # Main
 if __name__ == "__main__":
