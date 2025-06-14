@@ -1,5 +1,5 @@
 This repo is to designed to quickly update and prepare disposable virtual machines (such as
-HackTheBox's Pwnbox) for pentesting, catalog frequently used cli hacking tools, and support the 
+HackTheBox's Pwnbox) for pentesting, catalog frequently used pentesting tools, and support the 
 automation of enumerating target machines.
 
 Everything in this repo are very much works in progress and should not be assumed functional, 
