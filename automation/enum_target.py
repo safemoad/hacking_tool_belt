@@ -8,7 +8,7 @@ RHOST = ""
 def get_RHOST():
   global RHOST
   while True:
-        target_response = input("Enter the target IP address (e.g., 192.168.1.1 or example.com): ")
+        target_response = input("Enter the target IP address (e.g., 192.168.1.1 or example.com):")
 
         # Basic validation for IP address or hostname format
         ip_pattern = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
@@ -19,11 +19,11 @@ def get_RHOST():
             print(f"Target '{RHOST}' acquired! ")
             break
         else:
-            print("Invalid IP address or hostname format. Please try again. ")
+            print("Invalid IP address or hostname format. Please try again.")
 
 # NMAP Target
 def nmap_target():
-      print(f"Initiating NMAP scan on: '{RHOST}', please wait... ")
+      print(f"Initiating NMAP scan on: '{RHOST}', please wait...")
   
 # Main
 if __name__ == "__main__":
