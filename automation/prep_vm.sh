@@ -2,7 +2,7 @@
 
 # Update VM
 echo 'Updating and upgrading VM...'
-sudo apt update  > /dev/null 2>&1 && sudo apt safe-upgrade  > /dev/null 2>&1
+sudo apt update && sudo apt safe-upgrade
 
 # Update Searchsploit
 echo 'Updating Searchsploit database...'
