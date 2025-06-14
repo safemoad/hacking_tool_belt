@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 # Update VM
-echo 'Updating and upgrading..."
+echo 'Updating and upgrading VM..."
 sudo apt update  > /dev/null 2>&1 && sudo apt safe-upgrade  > /dev/null 2>&1
 
 # Update Searchsploit
