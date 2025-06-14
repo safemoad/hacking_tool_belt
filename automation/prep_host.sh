@@ -18,3 +18,6 @@ searchsploit -u > /dev/null 2>&1
 # Update Locate Database
 echo 'Step 3 of 3: Updating Locate database, please wait... '
 sudo updatedb > /dev/null 2>&1
+
+# Finished
+echo '***Host prep complete!***
