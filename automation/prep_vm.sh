@@ -5,7 +5,7 @@ echo 'Updating and upgrading VM...'
 sudo apt update  > /dev/null 2>&1 && sudo apt safe-upgrade  > /dev/null 2>&1
 
 # Update Searchsploit
-echo 'Updating Searchsploit...'
+echo 'Updating Searchsploit database...'
 searchsploit -u > /dev/null 2>&1
 
 # Update Locate Database
