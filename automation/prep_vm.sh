@@ -1,8 +1,13 @@
 #! /usr/bin/bash
 
 # Update VM and Packages
-echo 'Step 1 of 3: Updating and upgrading VM, please wait...'
-yes | sudo apt update > /dev/null 2>&1 && yes | sudo apt upgrade > /dev/null 2>&1 
+read -p "Step 1 of 3: Run APT Update/Upgrade on this machine? <Y/n>" prompt
+  if [$prompt == "Y"]
+  then
+    echo 'Step 1 of 3: Updating and upgrading VM, please wait...' && yes | sudo apt update && yes | sudo apt upgrade
+  else
+    echo "Step 1 of 3: Skipping APT Update/Upgrade"
+  fi
 
 # Update Searchsploit Database
 echo 'Step 2 of 3: Updating Searchsploit database, please wait...'
