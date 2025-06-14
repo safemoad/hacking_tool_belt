@@ -5,7 +5,7 @@ read -n 1 -p 'Step 1 of 3: Run APT Update/Upgrade on this machine? [Y/n] ' respo
   if [ "$response" != "Y" ] 
     then 
       echo ''
-      echo 'Step 1 of 3: Skipping APT Update/Upgrade '
+      echo '***Skipping APT Update/Upgrade*** '
     fi
   if [ "$response" == "Y" ] 
     then
