@@ -7,5 +7,5 @@ but please feel free touse at your own risk and provide feedback or suggestions.
 
 ### Links to tools
 
-- [REVshells] (https://www.revshells.com/)
-- [GTFOBins] (https://gtfobins.github.io)
+- [REVshells](https://www.revshells.com/)
+- [GTFOBins](https://gtfobins.github.io)
