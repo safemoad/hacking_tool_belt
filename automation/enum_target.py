@@ -1,9 +1,11 @@
 # Import required modules
 import re
+import os
+import sys
+import subprocess
 
 # Global variables defined by prompts
 target = None
-scanner = nmap.PortScanner()
 
 # Get and store IP address from prompt
 def get_target_ip():
@@ -23,9 +25,9 @@ def get_target_ip():
             print("Invalid IP address or hostname format. Please try again.")
 
 # Print current target
-def print(target):
+def print():
   print("Your current nmap target is " + target)
 
 # Main
 if __name__ == "__main__":
-  print(target)
+  print()
