@@ -23,7 +23,7 @@ def get_RHOST():
 
 # Print current target
 def print_target():
-  print("Your current nmap target is '{RHOST)'
+  print("Your current nmap target is '{RHOST)'.")
 
 # Main
 if __name__ == "__main__":
