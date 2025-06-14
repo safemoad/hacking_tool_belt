@@ -1,6 +1,5 @@
 # Import required modules
 import re
-import nmap
 
 # Global variables defined by prompts
 target = None
@@ -23,8 +22,10 @@ def get_target_ip():
         else:
             print("Invalid IP address or hostname format. Please try again.")
 
+# Print current target
 def print(target):
   print("Your current nmap target is " + target)
 
+# Main
 if __name__ == "__main__":
   print(target)
