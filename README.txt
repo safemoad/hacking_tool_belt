@@ -2,5 +2,5 @@ This repo is to designed to quickly update and prepare disposable virtual machin
 HackTheBox's Pwnbox) for pentesting, catalog frequently used cli hacking tools, and support the 
 automation of enumerating target machines.
 
-All files are works in progress and should not be assumed functional, but please feel free to
-use at your own risk.
+Everything in this repo are very much works in progress and should not be assumed functional, 
+but please feel free touse at your own risk and provide feedback or suggestions.
