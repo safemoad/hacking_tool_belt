@@ -16,7 +16,7 @@ def get_RHOST():
 
         if ip_pattern.match(target_response) or hostname_pattern.match(target_response):
             RHOST = target_response
-            print(f"Target '{RHOST}' acquired!")
+            print(f"Target '{RHOST}' acquired! ")
             break
         else:
             print("Invalid IP address or hostname format. Please try again. ")
