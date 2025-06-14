@@ -11,7 +11,7 @@ read -p "Step 1 of 3: Run APT Update/Upgrade on this machine? <Y/n>" prompt
 
 # Update Searchsploit Database
 echo 'Step 2 of 3: Updating Searchsploit database, please wait...'
-searchsploit -u > /dev/null 2>&1
+searchsploit -u > #/dev/null 2>&1
 
 # Update Locate Database
 echo 'Step 3 of 3: Updating Locate database, please wait...'
