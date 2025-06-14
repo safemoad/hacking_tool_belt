@@ -1,4 +1,13 @@
 #! /usr/bin/bash
-sudo apt update && sudo apt upgrade
-searchsploit -u
+
+# Update VM
+echo 'Updating and upgrading..."
+sudo apt update  > /dev/null 2>&1 && sudo apt safe-upgrade  > /dev/null 2>&1
+
+# Update Searchsploit
+echo 'Updating Searchsploit..."
+searchsploit -u > /dev/null 2>&1
+
+# Update Locate Database
+echo 'Updating Locate database..."
 sudo updatedb
