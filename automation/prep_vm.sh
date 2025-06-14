@@ -1,10 +1,10 @@
 #! /usr/bin/bash
 
-# Update VM
+# Update VM and Packages
 echo 'Step 1 of 3: Updating and upgrading VM, please wait...'
 yes | sudo apt update > /dev/null 2>&1 && yes | sudo apt safe-upgrade > /dev/null 2>&1 
 
-# Update Searchsploit
+# Update Searchsploit Database
 echo 'Step 2 of 3: Updating Searchsploit database, please wait...'
 searchsploit -u > /dev/null 2>&1
 
