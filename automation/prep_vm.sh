@@ -7,6 +7,7 @@ read -p "Step 1 of 3: Run APT Update/Upgrade on this machine? <Y/n>" prompt
     echo 'Step 1 of 3: Updating and upgrading VM, please wait...' && yes | sudo apt update && yes | sudo apt upgrade
   else
     echo "Step 1 of 3: Skipping APT Update/Upgrade"
+    exit 0
 
 # Update Searchsploit Database
 echo 'Step 2 of 3: Updating Searchsploit database, please wait...'
