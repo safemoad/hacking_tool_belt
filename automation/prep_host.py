@@ -1,4 +1,5 @@
-# Import packages
+# Import required modules
+import subprocess
 
 # Update OS and Packages
 read -n 1 -p 'Step 1 of 3: Run APT Update/Upgrade on this machine? [Y/n] ' response
