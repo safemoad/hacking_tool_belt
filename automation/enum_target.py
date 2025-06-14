@@ -16,14 +16,14 @@ def get_RHOST():
 
         if ip_pattern.match(target_response) or hostname_pattern.match(target_response):
             RHOST = target_response
-            print(f"\nTarget '{RHOST}' acquired!")
+            print(f"Target '{RHOST}' acquired!")
             break
         else:
             print("Invalid IP address or hostname format. Please try again.")
 
 # Print current target
 def print_target():
-  print("Your current nmap target is '{RHOST}'.")
+  print(f"Your current nmap target is '{RHOST}'.")
 
 # Main
 if __name__ == "__main__":
