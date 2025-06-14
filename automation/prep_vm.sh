@@ -9,7 +9,7 @@ read -n 1 -p 'Step 1 of 3: Run APT Update/Upgrade on this machine? [Y/n] ' respo
     fi
   if [ "$response" == "Y" ] 
     then
-      echno ''
+      echo ''
       echo 'Step 1 of 3: Updating and upgrading VM, please wait... ' && yes | sudo apt update > /dev/null 2>&1 && yes | sudo apt upgrade > /dev/null 2>&1
     fi
 
