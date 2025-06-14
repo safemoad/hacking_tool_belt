@@ -1,7 +1,7 @@
 # Import required modules
 import re
 
-# Global variables defined by prompts
+# System defined variables
 RHOST = ""
 
 # Get and store IP address from prompt
@@ -21,11 +21,11 @@ def get_RHOST():
         else:
             print("Invalid IP address or hostname format. Please try again.")
 
-# Print current target
-def print_target():
-  print(f"Your current nmap target is '{RHOST}'.")
-
+# NMAP Target
+def nmap_target():
+      print(f"Initiating NMAP scan on: '{RHOST}'")
+  
 # Main
 if __name__ == "__main__":
   get_RHOST()
-  print_target()
+  nmap_target()
