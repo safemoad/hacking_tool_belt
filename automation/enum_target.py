@@ -6,7 +6,7 @@ from termcolor import colored
 # User defined variables
 nmap_options = "-Pn -p- -sV -sC -oA"
 vhost_domains = ".htb"
-ffuf_options = "-ic -ac -of md -o"
+ffuf_options = "-mc all -ic -ac -of md -o"
 directory_wordlist = "/usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt"
 subdomain_wordlist = "/usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt"
 
