@@ -7,7 +7,7 @@ def update_apt():
     response = input("Step 1 of 3: Run APT Update/Upgrade on this machine? [Y/n]")
     if response == "Y":
         print(colored("Step 1 of 3: Updating and upgrading machine, please wait...", "yellow"))
-        process = subprocess.run(["sudo apt update -y && sudo apt upgrade -y"], shell=True)
+        process = subprocess.run(["sudo apt update && sudo apt upgrade && sudo apt autoremove"], shell=True)
     else:
         print(colored("***Skipping APT Update/Upgrade***", "green"))
 
