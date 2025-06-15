@@ -5,6 +5,9 @@ from termcolor import colored
 
 # User defined variables
 nmap_options = "-Pn -p- -sV -sC -oA"
+ffuf_options = "-ic -ac -c"
+directory_wordlist = "/usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt"
+subdomain_wordlist = "/usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt"
 
 # System defined variables
 RHOST = ""
