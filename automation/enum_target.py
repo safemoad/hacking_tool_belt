@@ -61,7 +61,7 @@ def enum_webserver():
 
 # Use NMAP outfile to return possible service vulnerabilities
 def check_searchsploit():
-    print(colored(f"Checking NMAP results for possible vulnerabilities on: '{RHOST}'"), "yellow")
+    print(colored(f"Checking NMAP results for possible vulnerabilities on: '{RHOST}'", "yellow"))
     process = subprocess.run([f"searchsploit --nmap {RHOST}/{RHOST}nmap.xml > {RHOST}/{RHOST}vulns"], shell=True)
 
 # Main
