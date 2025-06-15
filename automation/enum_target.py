@@ -5,12 +5,14 @@ from termcolor import colored
 
 # User defined variables
 nmap_options = "-Pn -p- -sV -sC -oA"
-ffuf_options = "-ic -ac -c"
+vhost_domains = ".htb"
+ffuf_options = "-ic -ac -c -of csv -of md -o"
 directory_wordlist = "/usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt"
 subdomain_wordlist = "/usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt"
 
 # System defined variables
 RHOST = ""
+VHOST = ""
 
 # Create directory for enumeration output
 def make_dir():
@@ -34,19 +36,33 @@ def get_RHOST():
         else:
             print(colored("Invalid IP address or hostname format. Please try again.", "red"))
 
-# Create directory for enumeration output
-def make_dir():
-    process = subprocess.run([f"mkdir {RHOST}"], shell=True, capture_output=True, text=True)
-    print(colored((process.stderr), "red"))
-
 # NMAP Target
 def nmap_target():
     print(colored(f"Initiating NMAP scan on: '{RHOST}', please wait...", "yellow"))
-    process = subprocess.run([f"nmap {nmap_options} {RHOST}/{RHOST} {RHOST}"], shell=True)
-  
+    process = subprocess.run([f"nmap {nmap_options} {RHOST}/{RHOST}nmap {RHOST}"], shell=True)
+
+# Detect webserver and enumerate directories
+def enum_webserver():
+        #add vhost check process and /etc/host addition
+
+        process = subprocess.run([f"grep 'http\|https' {RHOST}/{RHOST}nmap.gnmap"], shell=True, capture_output=True, text=True)
+        while True:
+        
+            if process.stdout != "":
+                print(colored(f"Webserver detected. Initiating directory discovery on: '{RHOST}', please wait...", "yellow"))
+                enumdirs = subprocess.run([f"ffuf -u http://{RHOST}/FUZZ -w {directory_wordlist} {ffuf_options} {RHOST}/{RHOST}dirs"], shell=True)
+            break
+        #error handling needs testing
+        else:
+           print(process.stdout)
+           print(process.errout)
+
+        #add subdomain check process
+
 # Main
 if __name__ == "__main__":
   get_RHOST()
   make_dir()
   nmap_target()
+  enum_webserver()
   print(colored(f"***Target enumeration complete!***\nEnumeration output files saved to the '{RHOST}' directory.", "green"))
