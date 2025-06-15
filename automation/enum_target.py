@@ -6,7 +6,7 @@ from termcolor import colored
 # User defined variables
 nmap_options = "-Pn -p- -sV -sC -oA"
 vhost_domains = ".htb"
-ffuf_options = "-ic -ac -c -of csv -of md -o"
+ffuf_options = "-ic -ac -of md -o"
 directory_wordlist = "/usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt"
 subdomain_wordlist = "/usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt"
 
@@ -59,10 +59,16 @@ def enum_webserver():
 
         #add subdomain check process
 
+# Use NMAP outfile to return possible service vulnerabilities
+def check_searchsploit():
+    print(colored(f"Checking NMAP results for possible vulnerabilities on: '{RHOST}'"), "yellow")
+    process = subprocess.run(["searchsploit --nmap {RHOST}/{RHOST}nmap.xml > {RHOST}/{RHOST}vulns"], shell=True)
+
 # Main
 if __name__ == "__main__":
   get_RHOST()
   make_dir()
   nmap_target()
   enum_webserver()
+  check_searchsploit()
   print(colored(f"***Target enumeration complete!***\nEnumeration output files saved to the '{RHOST}' directory.", "green"))
