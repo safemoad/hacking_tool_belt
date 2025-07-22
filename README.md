@@ -5,15 +5,15 @@ automation of enumerating target machines.
 Everything in this repo are very much works in progress and should not be assumed functional, 
 but please feel free to use at your own risk and provide feedback or suggestions.
 
-### Links to tools
+## Links to tools
 
 - [SecLists](https://github.com/danielmiessler/SecLists)
 - [REVshells](https://www.revshells.com/)
 
-## Windows
+### Windows
 
-## Linus
+### Linus
 
 - [GTFOBins](https://gtfobins.github.io)
 
-## MacOS
+### MacOS
