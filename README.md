@@ -8,11 +8,13 @@ but please feel free to use at your own risk and provide feedback or suggestions
 ## Links to tools
 
 - [SecLists](https://github.com/danielmiessler/SecLists)
-- [REVshells](https://www.revshells.com/)
+- [REVshells](https://www.revshells.com)
 
 ### Windows
 
-### Linus
+- [LOLBAS](https://lolbas-project.github.io)
+
+### Linux
 
 - [GTFOBins](https://gtfobins.github.io)
 
