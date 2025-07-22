@@ -2,7 +2,7 @@
 import subprocess
 from termcolor import colored
 
-#Update OS and Packages
+# Update OS and Packages
 def update_apt():
     response = input("Step 1 of 3: Run APT Update/Upgrade on this machine? [Y/n]")
     if response == "Y":
@@ -11,7 +11,7 @@ def update_apt():
     else:
         print(colored("***Skipping APT Update/Upgrade***", "green"))
 
-#Update Searchsploit Database
+# Update Searchsploit Database
 def update_searchsploit():
     print(colored("Step 2 of 3: Updating Searchsploit database, please wait...", "yellow"))
     process = subprocess.run(["searchsploit -u"], shell=True)
