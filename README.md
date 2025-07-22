@@ -12,10 +12,12 @@ but please feel free to use at your own risk and provide feedback or suggestions
 
 ### Windows
 
+- [Upgrade Shells](https://zweilosec.github.io/posts/upgrade-windows-shell)
 - [LOLBAS](https://lolbas-project.github.io)
 
 ### Linux
 
+- [Upgrade Shells](https://zweilosec.github.io/posts/upgrade-linux-shell)
 - [GTFOBins](https://gtfobins.github.io)
 
 ### MacOS
