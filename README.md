@@ -9,4 +9,11 @@ but please feel free to use at your own risk and provide feedback or suggestions
 
 - [SecLists](https://github.com/danielmiessler/SecLists)
 - [REVshells](https://www.revshells.com/)
+
+## Windows
+
+## Linus
+
 - [GTFOBins](https://gtfobins.github.io)
+
+## MacOS
