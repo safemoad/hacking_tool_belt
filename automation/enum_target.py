@@ -43,7 +43,7 @@ def nmap_target():
 
 # Detect webserver and enumerate directories
 def enum_webserver():
-        #add vhost check process and /etc/host addition
+        #TODO: add vhost check process and /etc/host addition
 
         process = subprocess.run([f"grep 'http\|https' {RHOST}/{RHOST}nmap.gnmap"], shell=True, capture_output=True, text=True)
         while True:
@@ -52,12 +52,12 @@ def enum_webserver():
                 print(colored(f"Webserver detected. Initiating directory discovery on: '{RHOST}', please wait...", "yellow"))
                 enumdirs = subprocess.run([f"ffuf -u http://{RHOST}/FUZZ -w {directory_wordlist} {ffuf_options} {RHOST}/{RHOST}dirs"], shell=True)
             break
-        #error handling needs testing
+        #TODO: error handling needs testing
         else:
            print(process.stdout)
            print(process.errout)
 
-        #add subdomain check process
+        #TODO: add subdomain check process
 
 # Use NMAP outfile to return possible service vulnerabilities
 def check_searchsploit():
