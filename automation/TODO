@@ -1,5 +1,5 @@
 if .htb
--add /etc/hosts
+-add /etc/hosts like: echo "(ip_address) (domain)" | sudo tee -a /etc/hosts
 
 -subdomains?
 
@@ -17,5 +17,3 @@ Shell stabilization cheatsheet
 nc -lvnp 9001
 
 python3 -m http.server 8000
-
-echo "(ip_address) (domain)" | sudo tee -a /etc/hosts
