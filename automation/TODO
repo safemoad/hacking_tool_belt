@@ -1,0 +1,21 @@
+if .htb
+-add /etc/hosts
+
+-subdomains?
+
+if smb
+-L
+
+Others:
+
+start reverse shell
+start webserver
+hashcat cheatsheet
+Metasploit cheatsheet
+Shell stabilization cheatsheet
+
+nc -lvnp 9001
+
+python3 -m http.server 8000
+
+echo "(ip_address) (domain)" | sudo tee -a /etc/hosts
