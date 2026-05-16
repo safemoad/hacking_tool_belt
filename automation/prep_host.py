@@ -12,7 +12,7 @@ def update_apt():
         print(colored("***Skipping APT Update/Upgrade***", "green"))
 
 # Configure SSH
-def configure_ssh
+def configure_ssh():
     response = input("Step 2 of 3: Enable SSH on this machine? [Y/n]")
     if response == "Y": 
         print(colored("Step 2 of 3: Configuring SSH, please wait...", "yellow")) 
@@ -22,7 +22,7 @@ def configure_ssh
         print(colored("***Skipping SSH Setup***", "green"))
 
 # Configure Service Ports
-def configure_services
+def configure_services():
     response = input("Step 3 of 3: Configure Service Ports (http:8000 and nc:9001) on this machine? [Y/n]")
     if response == "Y": 
         process = subprocess.run(["ip addr | grep 'tun0'"], shell=True, capture_output=True, text=True)
