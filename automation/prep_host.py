@@ -16,8 +16,8 @@ def configure_ssh():
     response = input("Step 2 of 3: Enable SSH on this machine? [Y/n]")
     if response == "Y": 
         print(colored("Step 2 of 3: Configuring SSH, please wait...", "yellow")) 
-        process = subprocess.run(["sudo systemctl enable ssh && sudo systemctl start ssh"], shell=True, text=True)
-        process = subprocess.run(["sudo ufw enable && sudo ufw allow in on eth0 to any port 22"], shell=True, text=True)
+        process = subprocess.run(["sudo systemctl enable ssh && sudo systemctl start ssh"], shell=True)
+        process = subprocess.run(["sudo ufw enable && sudo ufw allow in on eth0 to any port 22"], shell=True)
     else:        
         print(colored("***Skipping SSH Setup***", "green"))
 
@@ -26,16 +26,12 @@ def configure_services():
     response = input("Step 3 of 3: Configure Service Ports (http:8000 and nc:9001) on this machine? [Y/n]")
     if response == "Y": 
         process = subprocess.run(["ip addr | grep 'tun0'"], shell=True, capture_output=True, text=True)
-        while True:
-            if not result.stdout.strip():
-                user_input = input("No output found. Please enter the data manually: ")
+        if process.stdout.strip() == "":
                 print(colored("HTB VPN Not Detected: Connect to HTB Network To Proceed", "red"))
             else:
-                break
-        else:
-            print(colored("Step 3 of 3: Configuring Service Ports, please wait...", "yellow"))    
-            process = subprocess.run(["sudo systemctl enable ssh && sudo systemctl start ssh"], shell=True, text=True)
-            process = subprocess.run(["sudo ufw enable && sudo ufw allow in on tun0 to any port 8000 && sudo ufw allow in on tun0 to any port 9001"], shell=True, text=True)
+                print(colored("Step 3 of 3: Configuring Service Ports, please wait...", "yellow"))    
+                process = subprocess.run(["sudo systemctl enable ssh && sudo systemctl start ssh"], shell=True)
+                process = subprocess.run(["sudo ufw enable && sudo ufw allow in on tun0 to any port 8000 && sudo ufw allow in on tun0 to any port 9001"], shell=True)
     else:        
         print(colored("***Skipping Port Setup***", "green"))
 
