@@ -11,20 +11,28 @@ def update_apt():
     else:
         print(colored("***Skipping APT Update/Upgrade***", "green"))
 
-# Update Searchsploit Database
-def update_searchsploit():
-    print(colored("Step 2 of 3: Updating Searchsploit database, please wait...", "yellow"))
-    process = subprocess.run(["searchsploit -u"], shell=True)
+# Configure SSH
+def configure_ssh
+    response = input("Step 2 of 3: Enable SSH on this machine? [Y/n]")
+    if response == "Y": 
+        print(colored("Step 2 of 3: Configuring SSH, please wait...", "yellow"))    
+        process = subprocess.run(["sudo systemctl enable ssh && sudo systemctl start ssh"], shell=True, capture_output=True, text=True)
+        process = subprocess.run(["sudo ufw enable && sudo ufw allow in on eth0 to any port 22"], shell=True, capture_output=True, text=True)
+    else:        
+        print(colored("***Skipping SSH Setup***", "green"))
 
-# Update Locate Database
-def update_locate():
-    print(colored("Step 3 of 3: Updating Locate database, please wait...", "yellow"))
-    process = subprocess.run(["sudo updatedb"], shell=True, capture_output=True, text=True)
-    print(colored((process.stderr), "red"))
+# Configure Service Ports
+def configure_services
+    response = input("Step 3 of 3: Configure Service Ports (http:8000 and nc:9001) on this machine? [Y/n]")
+    if response == "Y": 
+        print(colored("Step 3 of 3: Configuring SSH, please wait...", "yellow"))    
+        process = subprocess.run(["sudo systemctl enable ssh && sudo systemctl start ssh"], shell=True, capture_output=True, text=True)
+        process = subprocess.run(["sudo ufw enable && sudo ufw allow in on tun0 to any port 8000 && sudo ufw allow in on tun0 to any port 9001"], shell=True, capture_output=True, text=True)
+    else:        
+        print(colored("***Skipping Port Setup***", "green"))
 
 # Main
 if __name__ == "__main__":
     update_apt()
-    update_searchsploit()
-    update_locate()
+    configure_ssh()
     print(colored("***Host prep complete!***", "green"))
