@@ -16,8 +16,8 @@ def configure_ssh():
     response = input("Step 2 of 3: Enable SSH on this machine? [Y/n]")
     if response == "Y": 
         print(colored("Step 2 of 3: Configuring SSH, please wait...", "yellow")) 
-        process = subprocess.run(["sudo systemctl enable ssh && sudo systemctl start ssh"], shell=True, capture_output=True, text=True)
-        process = subprocess.run(["sudo ufw enable && sudo ufw allow in on eth0 to any port 22"], shell=True, capture_output=True, text=True)
+        process = subprocess.run(["sudo systemctl enable ssh && sudo systemctl start ssh"], shell=True, text=True)
+        process = subprocess.run(["sudo ufw enable && sudo ufw allow in on eth0 to any port 22"], shell=True, text=True)
     else:        
         print(colored("***Skipping SSH Setup***", "green"))
 
@@ -34,8 +34,8 @@ def configure_services():
                 break
         else:
             print(colored("Step 3 of 3: Configuring Service Ports, please wait...", "yellow"))    
-            process = subprocess.run(["sudo systemctl enable ssh && sudo systemctl start ssh"], shell=True, capture_output=True, text=True)
-            process = subprocess.run(["sudo ufw enable && sudo ufw allow in on tun0 to any port 8000 && sudo ufw allow in on tun0 to any port 9001"], shell=True, capture_output=True, text=True)
+            process = subprocess.run(["sudo systemctl enable ssh && sudo systemctl start ssh"], shell=True, text=True)
+            process = subprocess.run(["sudo ufw enable && sudo ufw allow in on tun0 to any port 8000 && sudo ufw allow in on tun0 to any port 9001"], shell=True, text=True)
     else:        
         print(colored("***Skipping Port Setup***", "green"))
 
