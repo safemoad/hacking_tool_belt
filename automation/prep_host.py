@@ -28,7 +28,7 @@ def configure_services():
         while True:
             process = subprocess.run(["ip addr | grep 'tun0'"], shell=True, capture_output=True, text=True)
             if process.stdout.strip() == "":
-                input("HTB VPN Not Detected: Connect to HTB Network and try again")
+                input("HTB VPN NOT DETECTED: Connect to HTB Network and try again.")
             else:
                 break
         print(colored("Step 3 of 3: Configuring Service Ports, please wait...", "yellow"))
