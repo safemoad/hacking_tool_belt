@@ -40,4 +40,5 @@ def configure_services
 if __name__ == "__main__":
     update_apt()
     configure_ssh()
+    configure_services()
     print(colored("***Host prep complete!***", "green"))
