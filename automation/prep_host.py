@@ -32,7 +32,7 @@ def configure_services():
             else:
                 break
         print(colored("Step 3 of 3: Configuring Service Ports, please wait...", "yellow"))
-        process = subprocess.run(["sudo ufw enable && sudo ufw allow in on tun0 to any port 8000 && sudo ufw allow in on tun0 to any port 9001"], shell=True)
+        process = subprocess.run(["sudo ufw allow in on tun0 to any port 8000 && sudo ufw allow in on tun0 to any port 9001"], shell=True)
     else:        
         print(colored("***Skipping Port Setup***", "green"))
 
