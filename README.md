@@ -10,8 +10,10 @@ but please feel free to use at your own risk and provide feedback or suggestions
 - [NMAP Cheat Sheet](https://cdn.comparitech.com/wp-content/uploads/2019/06/Nmap-Cheat-Sheet.pdf)
 - [SecLists](https://github.com/danielmiessler/SecLists)
 - [NVD Search](https://nvd.nist.gov/vuln/search#/nvd/home)
+- [Metasploit Cheat Sheet]()
 - [Exploit DB](https://www.exploit-db.com/)
 - [REVshells](https://www.revshells.com)
+- [Decrypt Stuff](https://github.com/frizb/Hashcat-Cheatsheet)
 
 ### Windows
 
