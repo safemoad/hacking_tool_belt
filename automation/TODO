@@ -12,3 +12,13 @@ start reverse shell
   nc -lvnp 9001
 start webserver
   python3 -m http.server 8000
+
+
+Ideas for AI skills:
+-nmap create directory and all the options, check for redirect and add to hosts
+-webserver enumeration (fuff)
+-smb enumeration
+-decrypting stuff
+-wordlists
+-starting reverse shells
+-starting webserver
