@@ -9,11 +9,8 @@ if smb
 Others:
 
 start reverse shell
+  nc -lvnp 9001
 start webserver
+  python3 -m http.server 8000
 hashcat cheatsheet
 Metasploit cheatsheet
-Shell stabilization cheatsheet
-
-nc -lvnp 9001
-
-python3 -m http.server 8000
