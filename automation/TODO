@@ -13,7 +13,7 @@ start reverse shell
 start webserver
   python3 -m http.server 8000
 
-Need to build core instruction set
+Need to build core instruction set/markdown
 
 Ideas for AI skills:
 -nmap create directory and all the options, check for redirect and add to hosts
