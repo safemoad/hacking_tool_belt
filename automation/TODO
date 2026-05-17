@@ -12,5 +12,3 @@ start reverse shell
   nc -lvnp 9001
 start webserver
   python3 -m http.server 8000
-hashcat cheatsheet
-Metasploit cheatsheet
