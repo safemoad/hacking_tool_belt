@@ -27,7 +27,7 @@ def configure_services():
     if response == "Y":
         while True:
             process = subprocess.run(["ip addr | grep 'tun0'"], shell=True, capture_output=True, text=True)
-            if process.stdout.strip() == "":
+            if process.stdout == "":
                 input("HTB VPN NOT DETECTED: Connect to HTB Network and try again.")
             else:
                 break
